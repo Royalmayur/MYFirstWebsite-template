@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awsome WebTemplate</title>
+    <link rel="shortcut icon" href="img4.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div><a href="#"> <img src="img4.jpg" alt=""> </a></div>
+            <div class="mi">
+                <ul>
+                    <li> <a href="index.html"><i class="fas fa-calculator"></i> CalCulator </a></li>
+                    <li> <a href="clock.html"><i class="far fa-clock"></i> Clock</a></li>
+                    <li> <a href="contact.html"><i class="fas fa-id-badge"></i> Contact Us </a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <input type="text"><i class="fas fa-search"></i>
+            </div>
+            <button onclick="hame()" class="ham"><i class="fas fa-bars"></i></button>
+            <div id="menu">
+                <a href="index.html"><i class="fas fa-calculator"></i> CalCulator </a>
+                <a href="clock.html"><i class="far fa-clock"></i> Clock</a>
+                <a href="contact.html"><i class="fas fa-id-badge"></i> Contact Us </a>
+            </div>
+        </nav>
+    </header>
+    <main onclick="bodyt()">
+        <div id="scr" class="screen"><span id="scrupper"></span> <br>
+            <span id="scrbottam"></span>
+        </div>
+        <div class="screen"> <button><i class="fas fa-backspace btn"></i></button></div>
+        <div class="container">
+            <!-- <button class="btn" id="com"><i class="fas fa-backspace"></i></button> -->
+            <button class="btn">C</button>
+            <button class="btn">(</button>
+            <button class="btn">)</button>
+            <button class="btn">%</button>
+            <button class="btn">/</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">x</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">-</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">+</button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn">=</button>
+        </div>
+    </main>
+    <script>
+        // For CALCULATOR
+        let screen = document.getElementById("scrupper").innerHTML;
+        let val1 = "";
+        let equal = "";
+        let bt = document.querySelectorAll('.btn');
+        bt.forEach(element => {
+            element.addEventListener('click', function go(a) {
+                val = a.target.innerText;
+
+                if (val == "x") {
+                    if (val1.length < 30) {
+                        val1 += "*";
+                        document.getElementById("scrupper").innerHTML = val1;
+                    }
+                }
+                else if (val == "C") {
+                    document.getElementById("scrupper").innerHTML = "";
+                    document.getElementById("scrbottam").innerHTML = "";
+                    val1 = "";
+                    equal = "";
+
+                }
+                else if (val == "%") {
+                    val = "*.01";
+                    val1 += val;
+                    document.getElementById("scrupper").innerHTML = val1;
+                }
+                else if (val == "") {
+                    val1 = val1.substr(0, val1.length - 1);
+                    document.getElementById("scrupper").innerHTML = val1;
+                    document.getElementById("scrbottam").innerHTML = "";
+                    equal = "";
+
+                }
+                else if (val == "=") {
+                    try {
+                        console.log(val1);
+                        equal = pars(val1);
+                        document.getElementById("scrbottam").innerHTML = equal;
+                    }
+                    catch (err) {
+                        document.getElementById("scrbottam").innerHTML = "Syntax Error";
+                    }
+                }
+                else {
+                    if (val1.length < 30) {
+                        val1 += val;
+                        document.getElementById("scrupper").innerHTML = val1;
+                    }
+                }
+            })
+        });
+        function pars(str) {
+            return Function(`'use strict'; return (${str})`)();
+        }
+
+    </script>
+    <script src="live.js"></script>
+</body>
+
+</html>

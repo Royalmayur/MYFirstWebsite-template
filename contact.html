@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awsome WebTemplate</title>
+    <link rel="shortcut icon" href="img4.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div><a href="#"> <img src="img4.jpg" alt=""> </a></div>
+            <div class="mi">
+                <ul>
+                    <li> <a href="index.html"><i class="fas fa-calculator"></i> CalCulator </a></li>
+                    <li> <a href="clock.html"><i class="far fa-clock"></i> Clock</a></li>
+                    <li> <a href="contact.html"><i class="fas fa-id-badge"></i> Contact Us </a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <input type="text"><i class="fas fa-search"></i>
+            </div>
+            <button class="ham" onclick="hame()"><i class="fas fa-bars"></i></button>
+            <div id="menu">
+                <a href="index.html"><i class="fas fa-calculator"></i> CalCulator </a>
+                <a href="clock.html"><i class="far fa-clock"></i> Clock</a>
+                <a href="contact.html"><i class="fas fa-id-badge"></i> Contact Us </a>
+            </div>
+        </nav>
+    </header>
+
+    <main onclick="bodyt()">
+        <div class="signup">
+            <h1>Sign Up</h1>
+            <form name="signup" action="#" onsubmit="return valid()" method="GET">
+                <div class="fom">
+                    <div class="fom">
+                        <label for="email"><i class="fas fa-envelope"></i></label>
+                        <input type="text" name="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="fom">
+                        <label for="password"><i class="fas fa-key"></i> </label>
+                        <input type="password" name="password" id="password" placeholder="Enter your Password"><span
+                            id="sh1" onclick="show1()"><i class="far fa-eye"></i></span>
+                    </div>
+                    <div class="fom">
+                        <label for="password"><i class="fas fa-lock"></i> </label>
+                        <input type="password" name="confirmpassword" id="confirmpassword"
+                            placeholder="ConfirmYourPassword"> <span id="sh2" onclick="show2()"><i
+                                class="far fa-eye"></i></span>
+                    </div>
+                    <div>
+                        <button class="btn1"> <input type="submit" value="Sign Up"></button>
+                    </div>
+            </form>
+        </div>
+    </main>
+    <script src="live.js"></script>
+</body>
+
+</html>

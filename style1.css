@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+main{
+    padding-top: 5rem;
+}
+main::after{
+    background: url('img.jpg') no-repeat center center/cover;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 25%;
+    margin: 0px auto;
+}
+.btn:hover{
+    box-shadow:0px 0px 13px 5px rgb(248, 178, 119); 
+    background-color: rgba(80, 132, 209, 0.549); 
+    color: black;
+}
+#com{
+    grid-column: 1/ span 4;
+}
+.btn{
+    color: rgb(234, 230 ,135);
+    font-weight: bold;
+    font-size: 27px;
+    cursor: pointer;
+    background:none;
+    outline: none;
+    padding: 10px 0px;
+    margin: 0px 0px;
+    transition: all 0.2s ease-in 0s;
+}
+.screen{
+    width: 25%;
+    margin: auto;
+    text-align: right;
+}
+#scr{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 50px;
+    width: 25% ;
+    overflow:auto;
+}
+.screen i{
+    background: none;
+    color: rgb(248, 239, 146);
+    padding: 10px 6px;
+    font-size: 33px;
+    cursor: pointer;
+}
+.screen button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+nav img{
+width: 68px;
+}
+nav{
+    max-width: 100%;
+    border-bottom: 2px solid grey;
+    display: flex;
+    justify-content: space-around;
+    background: none;
+    /* background-color:#370202; */
+    color: white;
+}
+.mi ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 23px 50px;
+    align-items: center;
+}
+.mi ul li a{
+    border-radius: 3px;
+    padding: 4px 0px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+}
+#search{
+    align-self: center;
+
+}
+#search input{
+    outline:none;
+    border-radius: 25px;
+    font-size: 23px;
+    padding: 13px 13px;
+    transition: all 0.3s ease 0s;
+}
+#search i{
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 5px;
+}  
+.mi ul li a:hover{
+    box-shadow:0px 0px 13px 5px rgb(3, 103, 233);
+   
+}
+#search input:hover{
+    box-shadow:0px 0px 13px 5px rgb(41, 116, 213);
+    color: rgb(117, 37, 182);
+}
+.ham:hover{
+    box-shadow:0px 0px 13px 5px rgb(3, 103, 233);
+}
+.ham {
+    display: none;
+    font-size: 32px;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 11px 25px;
+    margin-top: 7px;
+    transition: all 0.3s ease-in 0s;
+}
+
+/* hamurger menu */
+#menu {
+    display: none;
+    position:fixed;
+    top:8%;
+    right: 0px;
+    height: 68%;
+    background-color: black;
+    padding: 5px 18px;
+    animation-name: slide;
+    align-items: center;
+    animation-timing-function: ease;
+    animation-duration: 0.3s;
+}
+@keyframes slide{
+  from {width:0rem ;}
+     to  { width: 10rem;}
+}
+#menu a{
+    display: flex;
+    margin: 35px 0px;
+    border-radius: 3px;
+    padding: 4px 0px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    justify-content: left;
+    transition: all 0.3s ease-in 0s;
+}
+#menu a:hover{
+    box-shadow:0px 0px 13px 5px rgb(3, 103, 233);
+}
+/* clock.html */
+#stclock{
+    box-shadow:0px 0px 13px 5px rgb(3, 103, 233);
+    text-align: center;
+    background-color: black;
+    padding: 12px 41px ;
+    margin: auto;
+    margin-top: 12rem;
+    color: rgb(208, 37, 37);
+    width: 56rem;
+    font-size: 90px;
+}
+/* contact.html */
+.signup{
+    width: 25%;
+    margin:0px auto;
+    
+}
+.signup h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blanchedalmond;
+    font-size: 35px;
+    padding: 17px 7px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.823);
+    text-align: left;
+}
+.fom{
+    padding: 0px 0px;
+    margin: 20px 0px;
+}
+.fom  input{
+    color: blanchedalmond;
+    border: none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.789);
+    outline: none;
+    background: none;
+    font-size: 17px;
+    padding: 9px 1px;
+    margin: 0px 0px;
+}
+#show{
+    font-size: 17px;
+    padding: 9px 5px;
+    cursor: pointer;
+}
+.fom  i{
+    color: blanchedalmond;
+    margin-right: 7px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.fom i:hover{
+    transform: translateX(-1.5px);
+    text-shadow : 1px 1px  1px  rgb(237, 78, 20);
+}
+.fom  input:hover{
+    box-shadow : 0px 0px 13px 5px rgb(237, 78, 20);
+}
+.btn1{
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    background:none;
+    outline: none;
+    margin: 10px 20px;
+    transition: all 0.3s ease-in 0s;
+}
+@media screen and (max-width:992px){
+     .ham{
+        display: block;
+    }
+    .mi{
+        display: none;
+    } 
+     .container ,.screen,#scr{
+        min-width: 70%;
+    }
+    main{
+    height: 100%;;
+
+    }
+    #stclock{
+        max-width: 100%;
+    }
+    .signup{
+        margin: 8rem auto;
+        width: 65%;
+    }
+  }
+@media screen and (max-width:1064px){
+    .ham{
+        display: block;
+    }
+    .mi{
+        display: none;
+    }
+    .container ,.screen,#scr{
+       min-width: 60%;
+    }
+    main{
+    height: 100%;;
+
+    }
+    #stclock{
+        max-width: 100%;
+    }
+    .signup{
+        margin: 8rem auto;
+        width: 65%;
+    }
+    .fom input{
+        color: black;
+        background: rgba(223, 216, 207, 0.583);
+    }
+  }
+ @media screen 
+  and (max-width: 496px) 
+  /* and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) */
+{   .ham{
+        display: block;
+    }
+    .mi{
+        display: none;
+    }
+    .container ,.screen,#scr{
+       max-width: 60%;
+    }
+    #search{
+        display: none;
+    }
+    #menu{
+        top:12%;
+    }
+    main{
+    height: 100%;;
+
+    }
+    nav{
+        justify-content: space-between;
+    }
+    #stclock{
+        max-width: 100%;
+        font-size: 53px;
+
+    }
+    .signup{
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+    .fom input{
+        font-size:14px;
+        color: black;
+        background: rgba(223, 216, 207, 0.583);
+    }
+  }
