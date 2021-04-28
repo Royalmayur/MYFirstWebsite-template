@@ -1,19 +1,26 @@
 
 
 // hamburger menu
-hame=()=>{
+hame = () => {
     let ok = document.getElementById("menu");
-    if (ok.style.display == "none") {
-        ok.style.display = "block";
+    let change = document.querySelector(".ham");
+    if (ok.style.display == "block") {
+        ok.style.display = "none";
+        change.classList.remove('open')
+
     }
     else {
-        ok.style.display = "none";
+        ok.style.display = "block";
+        change.classList.add('open')
+
     }
 }
 function bodyt() {
     let ok1 = document.getElementById("menu");
+    let change1 = document.querySelector(".ham");
     if (ok1.style.display == "block") {
         ok1.style.display = "none";
+        change1.classList.remove('open');
     }
 }
 function clock1() {
@@ -75,16 +82,16 @@ function valid() {
         alert("Password Must have 8 or Greater then 8 character");
         return false;
     }
-    if ( (i5 ==(i1.length-10) ) || (i5 == (i1.length - 9)) ) {
+    if ((i5 == (i1.length - 10)) || (i5 == (i1.length - 9))) {
 
         if ((i4 == i1.length - 4) || (i4 == i1.length - 3)) {
             return true;
-    
+
         }
         else {
             alert("Please Enter valid Email");
-            return false; 
-      }
+            return false;
+        }
     }
     else {
         alert("Please Enter valid Email");
@@ -96,22 +103,22 @@ function show1() {
     let s1 = document.forms["signup"]["password"].type;
     if (s1 == "password") {
         document.forms["signup"]["password"].type = "text";
-        document.getElementById("sh1").innerHTML='<i class="far fa-eye-slash"></i>';
+        document.getElementById("sh1").innerHTML = '<i class="far fa-eye-slash"></i>';
     }
     else {
         document.forms["signup"]["password"].type = "password";
-        document.getElementById("sh1").innerHTML= '<i class="far fa-eye"></i';
+        document.getElementById("sh1").innerHTML = '<i class="far fa-eye"></i';
     }
 }
 function show2() {
     let s2 = document.forms["signup"]["confirmpassword"].type;
     if (s2 == "password") {
         document.forms["signup"]["confirmpassword"].type = "text";
-        document.getElementById("sh2").innerHTML='<i class="far fa-eye-slash"></i>';   
+        document.getElementById("sh2").innerHTML = '<i class="far fa-eye-slash"></i>';
     }
     else {
         document.forms["signup"]["confirmpassword"].type = "password";
-        document.getElementById("sh2").innerHTML= '<i class="far fa-eye"></i';
+        document.getElementById("sh2").innerHTML = '<i class="far fa-eye"></i';
     }
 
 }
